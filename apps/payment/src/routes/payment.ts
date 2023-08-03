@@ -50,3 +50,6 @@ export class PaymentRoute implements IPaymentRoute {
         return res.status(HttpStatusCode.Ok).json(payment);
     }
 }
+
+// At this situation you let the Controller handle logic. 
+// Wouldn't you provide services that will handle these? 
