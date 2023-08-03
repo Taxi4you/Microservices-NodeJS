@@ -60,10 +60,12 @@ export function apiErrorHandler(error: Error, _: Request, res: Response, next: N
                 break;
             default:
                 res.status(HttpStatusCode.InternalServerError).json({ message: error.message }); // should log it console.error
+                console.error(error);
         }
     } else {
         // should log it console.error
         res.status(HttpStatusCode.InternalServerError).json({ message: error.message });
+        console.error(error);
     }
 
     next(error);
