@@ -21,3 +21,5 @@ export class Factory {
         return new Handler(Factory.getLogicInstance());
     }
 }
+
+// perhaps this can be reused by putting it in the libs as a common module
